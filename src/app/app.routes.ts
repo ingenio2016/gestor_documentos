@@ -11,7 +11,7 @@ const APP_ROUTES: Routes = [
     component : DocumentsComponent,
     children: [
       { path: 'list', component: ListComponent },
-      { path: 'search/:type/query/:text', component: SearchComponent },
+      { path: 'search/:text', component: SearchComponent },
       { path: '**', pathMatch: 'full', redirectTo: 'list'}
     ]
   },

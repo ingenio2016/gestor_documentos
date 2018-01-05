@@ -13,8 +13,8 @@ export class SearchBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchDocument(type:string, text:string){
-    this._router.navigate( ['documents/search', type, 'query', text] );
+  searchDocument(text:string){
+    this._router.navigate( ['documents/search', text] );
   }
 
 }

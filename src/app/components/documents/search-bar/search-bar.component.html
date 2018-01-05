@@ -1,11 +1,4 @@
 <div class="form-inline my-2 my-lg-0">
-  <select class="form-control mr-sm-2" #searchBy>
-    <option value="0">Find By</option>
-    <option value="1">Name</option>
-    <option value="2">Description</option>
-    <option value="3">Author</option>
-    <option value="4">Content</option>
-  </select>
-  <input class="form-control mr-sm-2" type="text" placeholder="Search document" #searchText (keyup.enter)="searchDocument(searchBy.value, searchText.value)">
-  <button class="btn btn-outline-primary my-2 my-sm-0" type="button" (click)="searchDocument(searchBy.value, searchText.value)">Search</button>
+  <input class="form-control mr-sm-2" type="text" placeholder="Search document" #searchText (keyup.enter)="searchDocument(searchText.value)">
+  <button class="btn btn-outline-primary my-2 my-sm-0" type="button" (click)="searchDocument(searchText.value)">Search</button>
 </div>

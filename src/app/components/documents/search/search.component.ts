@@ -13,10 +13,9 @@ export class SearchComponent implements OnInit {
   type:string = "";
   constructor( private _activatedRoute:ActivatedRoute, private _documentService:DocumentService ) {
     this._activatedRoute.params.subscribe(params=> {
-      this.documents = this._documentService.searchDocument(params['type'], params['text']);
+      this.documents = this._documentService.searchDocument(params['text']);
       console.log(this.documents);
       this.term = params['text'];
-      this.type = params['type'];
     })
   }
 

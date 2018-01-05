@@ -25,36 +25,29 @@ export class DocumentService {
       });
   }
 
-  searchDocument(type: string, term:string) {
+  searchDocument(term:string) {
     this.loadMessages();
     let documentsArray:any[] = [];
     term = term.toLowerCase();
-    if(type == '1'){
+    if(term == ""){
+      documentsArray = this.documents;
+    }else{
       for(let document of this.documents){
         let name = document.name.toLowerCase();
         if(name.indexOf( term ) >= 0){
           documentsArray.push(document);
         }
-      }
-    }
-    if(type == '2'){
-      for(let document of this.documents){
+
         let description = document.description.toLowerCase();
         if(description.indexOf( term ) >= 0){
           documentsArray.push(document);
         }
-      }
-    }
-    if(type == '3'){
-      for(let document of this.documents){
+
         let author = document.author.toLowerCase();
         if(author.indexOf( term ) >= 0){
           documentsArray.push(document);
         }
-      }
-    }
-    if(type == '4'){
-      for(let document of this.documents){
+
         let content = document.content.toLowerCase();
         if(content.indexOf( term ) >= 0){
           documentsArray.push(document);
