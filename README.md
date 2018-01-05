@@ -1,2 +1,28 @@
-# gestor_documentos
-Segunda prueba de Gestion de Documentos con Angular
+
+#Steps to run the application
+
+1. Necesary installs
+
+  install node version 6.11.0 or higher and npm version 3.10.10 or higher from https://nodejs.org/es/download/
+
+2. Set up the Development Environment
+
+  npm install -g @angular/cli
+
+3. Create a Folder and clone the project from GitHub
+
+  git clone https://github.com/ingenio2016/gestor_documentos.git
+
+4. Navigate from the folder project
+
+  cd gestor_documentos
+
+5. run npm install
+
+6. Download the Environment files from https://drive.google.com/open?id=1ldhpSBSVozwa_xf06Te_l27kXlg3EgBb
+
+7. Replace the environment files on the path: src\environments
+
+8. run ng serve
+
+9. open http://localhost:4200
