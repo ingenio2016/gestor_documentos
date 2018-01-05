@@ -12,13 +12,21 @@ import { environment } from '../environments/environment';
 
 // Routes Import
 import { APP_ROUTING } from './app.routes';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { DocumentsComponent } from './components/documents/documents.component';
 
 // Providers/Services
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    HomeComponent,
+    DocumentsComponent
   ],
   imports: [
     BrowserModule,

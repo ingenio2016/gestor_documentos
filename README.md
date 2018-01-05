@@ -19,7 +19,7 @@
 
 5. run npm install
 
-6. Download the Environment files from https://drive.google.com/open?id=1ldhpSBSVozwa_xf06Te_l27kXlg3EgBb
+6. Download the Environment files from https://drive.google.com/open?id=1A4cJh97Tp_X4QpNt_1VPKKE_0yviMPEL
 
 7. Replace the environment files on the path: src\environments
 
