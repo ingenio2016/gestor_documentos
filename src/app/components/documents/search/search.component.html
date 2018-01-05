@@ -1,0 +1,21 @@
+<h3>Document List</h3>
+<hr>
+<div class="row">
+  <div class="col-md-6">
+    <app-search-bar></app-search-bar>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+<br>
+<div class="card-deck">
+  <div class="card" *ngFor="let document of documents; let i = index">
+    <div class="card-body">
+      <h5 class="card-title">{{ document.name }}</h5>
+      <p class="card-text text-justify">{{ document.description }}</p>
+    </div>
+    <div class="card-footer">
+      <i class="zmdi zmdi-account"></i> <small class="text-muted">{{ document.author }}</small>
+    </div>
+  </div>
+</div>
+
