@@ -4,6 +4,8 @@ import { DocumentsComponent } from './components/documents/documents.component';
 // Child Components
 import { ListComponent } from './components/documents/list/list.component';
 import { SearchComponent } from './components/documents/search/search.component';
+import { EditComponent } from './components/documents/edit/edit.component';
+
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent},
@@ -12,6 +14,7 @@ const APP_ROUTES: Routes = [
     children: [
       { path: 'list', component: ListComponent },
       { path: 'search/:text', component: SearchComponent },
+      { path: 'edit/:id', component: EditComponent },
       { path: '**', pathMatch: 'full', redirectTo: 'list'}
     ]
   },

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DocumentService } from "../../../providers/document.service"
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -9,12 +8,13 @@ import { Router } from '@angular/router';
 })
 export class ListComponent implements OnInit {
   private documents: any[] = [];
+  private asc = true;
+
   constructor( private _ds: DocumentService) {
   }
 
   ngOnInit() {
-    this._ds.loadMessages().subscribe( (data) => {
-      this.documents = data;
+    this._ds.loadMessages().subscribe( () => {
     })
   }
 }

@@ -8,14 +8,14 @@ export class DocumentService {
   documentsCollection: AngularFirestoreCollection<any>;
   documentsObs: Observable<any>;
   private documents: any[] = [];
-
+  private isSearch = false;
   constructor( private db: AngularFirestore ) {
     this.documentsCollection = this.db
-      .collection<any>('documents');
+      .collection<any>('documents', ref => ref.orderBy('date', 'desc'));
     this.documentsObs = this.documentsCollection.valueChanges();
   }
   loadMessages() {
-    return this.documentsObs
+    return this.documentsCollection.valueChanges()
       .map((docs: any[]) => {
         this.documents = [];
         for (const doc of docs){
@@ -57,6 +57,7 @@ export class DocumentService {
     if(documentsArray.length == 0){
       documentsArray = this.documents;
     }
+    this.isSearch = true;
     return documentsArray;
   }
 }

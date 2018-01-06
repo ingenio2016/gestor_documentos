@@ -4,17 +4,23 @@
   <div class="col-md-6">
     <app-search-bar></app-search-bar>
   </div>
-  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <button type="button" class="btn btn-outline-danger" (click)="asc=!asc">Order By Date</button>
+  </div>
 </div>
 <br>
 <div class="card-deck">
-  <div class="card" *ngFor="let document of documents; let i = index">
+  <div class="card" *ngFor="let document of documents | orderBy:!asc; let i = index">
+    <div class="card-header text-right">
+      <a [routerLink] = "['/documents/edit', i]" class="btn btn-sm btn-outline-info">Editar</a>
+    </div>
     <div class="card-body">
       <h5 class="card-title">{{ document.name }}</h5>
       <p class="card-text text-justify">{{ document.description }}</p>
     </div>
     <div class="card-footer">
-      <i class="zmdi zmdi-account"></i> <small class="text-muted">{{ document.author }}</small>
+      <i class="zmdi zmdi-account"></i> <small class="text-muted pull-left">{{ document.author }}</small> |
+      <i class="zmdi zmdi-calendar"></i> <small class="text-muted pull-left">{{ document.editDate | date }}</small>
     </div>
   </div>
 </div>
